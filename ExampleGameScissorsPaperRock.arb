@@ -1,0 +1,45 @@
+puts "(S)cissors,(P)aper,(R)ock "
+puts "Сделайте выбор:"
+@answer=gets.strip.capitalize
+def playerchoice
+    if @answer=="S"
+        puts "Вы выбрали ножницы"
+        return :scissors
+    elsif
+        @answer=="P"
+        puts "Вы выбрали бумагу"
+        return :paper
+    elsif
+        @answer=="R"
+        puts "Вы выбрали камень"
+        return :rock
+    end
+end
+play=playerchoice
+computarchoice=rand(0..2)
+arr= [:scissors, :paper, :rock]
+if arr[computarchoice]==play
+    puts "Компуктер тоже это выбрал =)"
+    puts "Ничья!"
+    elsif
+        arr[computarchoice]==:scissors && play==:paper
+        puts "Компуктер выбрал ножницы"
+        puts "Компуктер выиграл!"
+    elsif
+        arr[computarchoice]==:paper && play==:scissors
+        puts "Ты выиграл!"
+    elsif
+        arr[computarchoice]==:rock && play==:scissors
+        puts "Компуктер выбрал камень"
+        puts "Koмпуктер выиграл!"
+    elsif
+        arr[computarchoice]==:scissors && play==:rock
+        puts "Ты выиграл!"
+    elsif
+        arr[computarchoice]==:paper && play==:rock
+        puts "Компуктер выбрал бумагу"
+        puts "Компуктер выиграл!"
+    elsif
+        arr[computarchoice]==:rock && play==:paper
+        puts "Ты выиграл!"
+end
